@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-R">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración - YouTube</title>
+    <!-- Incluimos Tailwind CSS desde su CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0F0F0F] text-[#F1F1F1] font-sans">
+
+    <!-- 1. Barra de Navegación Superior (Header) -->
+    <header class="flex items-center justify-between px-4 py-2 bg-[#0F0F0F] border-b border-b-[#3F3F3F]">
+        <!-- Izquierda: Logo -->
+        <div class="flex items-center space-x-2">
+            <!-- Icono de Hamburguesa (placeholder) -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <span class="text-xl font-bold">YouTube</span>
+            <span class="text-xs text-gray-400">MX</span>
+        </div>
+
+        <!-- Centro: Barra de Búsqueda -->
+        <div class="flex-1 max-w-2xl mx-4">
+            <form class="flex">
+                <input type="text" placeholder="Buscar" class="flex-1 px-4 py-2 bg-[#121212] border border-[#3F3F3F] rounded-l-full focus:outline-none focus:border-blue-500 text-gray-200 placeholder-gray-500">
+                <button type="submit" class="px-5 py-2 bg-[#222222] border border-l-0 border-[#3F3F3F] rounded-r-full hover:bg-[#3F3F3F]">
+                    <!-- Icono de Búsqueda -->
+                    <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                </button>
+                <button type="button" class="ml-3 header-icon">
+                    <!-- Icono de Micrófono -->
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm-1 3a4 4 0 00-4 4v1a1 1 0 001 1h10a1 1 0 001-1v-1a4 4 0 00-4-4V7zM10 15a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z" clip-rule="evenodd"></path></svg>
+                </button>
+            </form>
+        </div>
+
+        <!-- Derecha: Iconos de Usuario -->
+        <div class="flex items-center space-x-4">
+            <button type="button" class="header-icon">
+                <!-- Icono de Crear (Plus) -->
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+            </button>
+            <button type="button" class="header-icon relative">
+                <!-- Icono de Notificaciones (Campana) -->
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341A6.002 6.002 0 006 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-600 ring-2 ring-white"></span>
+            </button>
+            <!-- Icono de Perfil -->
+            <button type="button" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold">
+                C
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. Contenido Principal (Sidebar + Panel) -->
+    <div class="flex max-w-7xl mx-auto pt-8">
+        
+        <!-- 2.1. Menú Lateral (Sidebar) -->
+        <aside class="w-1/4 px-6">
+            <h2 class="text-2xl font-semibold mb-6">Configuración</h2>
+            <nav>
+                <ul class="space-y-1">
+                    <li><a href="#" class="block px-4 py-3 nav-item">Cuenta</a></li>
+                    <li><a href="#" class="block px-4 py-3 nav-item">Notificaciones</a></li>
+                    <li><a href="#" class="block px-4 py-3 nav-item-active">Reproducción y rendimiento</a></li>
+                    <li><a href="#" class="block px-4 py-3 nav-item">Privacidad</a></li>
+                    <li><a href="#" class="block px-4 py-3 nav-item">Aplicaciones conectadas</a></li>
+                    <li><a href="#" class="block px-4 py-3 nav-item">Opciones de pago</a></li>
+                    <li><a href="#" class="block px-4 py-3 nav-item">Configuración avanzada</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 2.2. Panel de Contenido -->
+        <main class="w-3/4 pl-8">
+            <h1 class="text-2xl font-normal mb-2">Reproducción y rendimiento</h1>
+
+            <!-- Sección: Experiencia de visualización -->
+            <section class="mb-6">
+                <h3 class="text-xl font-medium mb-2">Lleva las riendas de tu experiencia de visualización</h3>
+                <p class="text-sm text-gray-400">La configuración de reproducción se aplica únicamente a este navegador.</p>
+            </section>
+
+            <hr class="border-t border-[#3F3F3F] my-8">
+
+            <!-- Contenedor Grid para las opciones -->
+            <!-- La primera columna es de 200px, la segunda toma el resto del espacio (1fr) -->
+            <div class="grid grid-cols-[200px_1fr] gap-x-8 gap-y-6">
+                
+                <!-- Fila: Tarjetas de información -->
+                <h4 class="text-base text-[#F1F1F1] font-medium pt-1">Tarjetas de información</h4>
+                <div>
+                    <div class="flex items-center space-x-3">
+                        <input type="checkbox" id="info-cards" checked>
+                        <label for="info-cards" class="flex-1 cursor-pointer">Mostrar tarjetas de información en el video</label>
+                        <!-- Icono de Ayuda -->
+                        <svg class="w-5 h-5 text-gray-400 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.79 4 4s-1.79 4-4 4c-1.742 0-3.223-.835-3.772-2M12 18v-2M12 6V4m0 16a8 8 0 110-16 8 8 0 010 16z"></path></svg>
+                    </div>
+                </div>
+
+                <!-- Fila: Subtítulos -->
+                <h4 class="text-base text-[#F1F1F1] font-medium pt-1">Subtítulos</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="always-show-subs" checked>
+                        <label for="always-show-subs" class="ml-4 flex-1 cursor-pointer">Mostrar siempre subtítulos</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="auto-gen-subs">
+                        <label for="auto-gen-subs" class="ml-4 flex-1 cursor-pointer">Incluir subtítulos generados automáticamente (cuando estén disponibles)</label>
+                    </div>
+                </div>
+                
+                <!-- Fila: Configuración de AV1 -->
+                <h4 class="text-base text-[#F1F1F1] font-medium pt-1">Configuración de AV1</h4>
+                <div class="space-y-4" role="radiogroup" aria-labelledby="av1-heading">
+                    <div class="flex items-center">
+                        <input type="radio" id="av1-auto" name="av1-config" value="auto" checked>
+                        <label for="av1-auto" class="ml-4 cursor-pointer">Automático (recomendado)</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="av1-sd" name="av1-config" value="sd">
+                        <label for="av1-sd" class="ml-4 cursor-pointer">Priorizar AV1 para SD</label>
+                        <!-- Icono de Ayuda -->
+                        <svg class="w-5 h-5 text-gray-400 cursor-pointer ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.79 4 4s-1.79 4-4 4c-1.742 0-3.223-.835-3.772-2M12 18v-2M12 6V4m0 16a8 8 0 110-16 8 8 0 010 16z"></path></svg>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="av1-always" name="av1-config" value="always">
+                        <label for="av1-always" class="ml-4 cursor-pointer">Priorizar siempre AV1</label>
+                         <!-- Icono de Ayuda -->
+                        <svg class="w-5 h-5 text-gray-400 cursor-pointer ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.79 4 4s-1.79 4-4 4c-1.742 0-3.223-.835-3.772-2M12 18v-2M12 6V4m0 16a8 8 0 110-16 8 8 0 010 16z"></path></svg>
+                    </div>
+                </div>
+
+                <!-- Fila: Listas de reproducción -->
+                <h4 class="text-base text-[#F1F1F1] font-medium pt-1">Listas de reproducción</h4>
+                <div>
+                    <div class="flex items-start space-x-12">
+                        <!-- Interruptor (Toggle) -->
+                        <div class="pt-1">
+                            <input type="checkbox" id="disable-recommendations" class="toggle" checked>
+                            <label for="disable-recommendations" class="toggle-track">
+                                <div class="toggle-thumb"></div>
+                            </label>
+                        </div>
+                        <label for="disable-recommendations" class="flex-1 cursor-pointer">
+                            <h4 class="text-base">Desactivar recomendaciones</h4>
+                            <p class="text-sm text-gray-400">Se desactivarán las listas de reproducción automáticas</p>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Fila: Navegación -->
+                <h4 class="text-base text-[#F1F1F1] font-medium pt-1">Navegación</h4>
+                <div>
+                    <div class="flex items-center space-x-12">
+                        <!-- Interruptor (Toggle) -->
+                        <div>
+                            <input type="checkbox" id="video-previews" class="toggle" checked>
+                            <label for="video-previews" class="toggle-track">
+                                <div class="toggle-thumb"></div>
+                            </label>
+                        </div>
+                        <label for="video-previews" class="flex-1 cursor-pointer">
+                            <h4 class="text-base">Vistas previas de videos</h4>
+                            <p class="text-sm text-gray-400">Se reproducirán vistas previas de los videos cuando coloques el cursor sobre las miniaturas</p>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

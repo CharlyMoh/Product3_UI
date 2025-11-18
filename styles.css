@@ -1,0 +1,134 @@
+/* Estilos personalizados para el tema oscuro de YouTube */
+body {
+    /* El fondo principal de YouTube es un negro casi puro */
+    background-color: #0F0F0F;
+    color: #F1F1F1;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para los íconos de la barra superior */
+.header-icon {
+    background-color: #272727;
+    border-radius: 9999px; /* fully-rounded */
+    padding: 8px; /* p-2 */
+    cursor: pointer;
+}
+.header-icon:hover {
+    background-color: #3F3F3F;
+}
+
+/* Estilo para el elemento de navegación activo */
+.nav-item-active {
+    background-color: #272727;
+    border-radius: 8px; /* rounded-lg */
+}
+
+.nav-item:hover {
+    background-color: #272727;
+    border-radius: 8px; /* rounded-lg */
+}
+
+/* Estilos para las casillas de verificación (checkbox) - excluyendo los toggles */
+input[type="checkbox"]:not(.toggle) {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #3F3F3F;
+    border: 2px solid #717171;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:not(.toggle):checked {
+    background-color: #3EA6FF;
+    border-color: #3EA6FF;
+}
+
+/* Flecha dentro del checkbox cuando está checked */
+input[type="checkbox"]:not(.toggle):checked::after {
+    content: '✓';
+    font-size: 14px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Estilos para los botones de radio (radio button) */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #0F0F0F; /* Fondo oscuro */
+    border: 2px solid #717171;
+    border-radius: 9999px; /* Círculo completo */
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s ease-in-out;
+}
+
+input[type="radio"]:hover {
+    border-color: #F1F1F1;
+}
+
+input[type="radio"]:checked {
+    border-color: #3EA6FF; /* Borde azul */
+}
+
+/* El círculo interior azul */
+input[type="radio"]:checked::after {
+    content: '';
+    display: block;
+    width: 10px; /* Tamaño del círculo interior */
+    height: 10px;
+    background-color: #3EA6FF; /* Color azul */
+    border-radius: 9999px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos para el interruptor (toggle) */
+input[type="checkbox"].toggle {
+    display: none; /* Ocultar el checkbox nativo */
+}
+
+.toggle-track {
+    width: 40px;
+    height: 20px;
+    background-color: #717171;
+    border-radius: 9999px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    display: inline-block;
+}
+
+.toggle-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: #F1F1F1;
+    border-radius: 9999px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Estado "encendido" del interruptor */
+input[type="checkbox"].toggle:checked + .toggle-track {
+    background-color: #3EA6FF !important;
+}
+
+input[type="checkbox"].toggle:checked + .toggle-track .toggle-thumb {
+    transform: translateX(20px);
+    background-color: #F1F1F1; /* El pulgar sigue siendo blanco */
+}
+
