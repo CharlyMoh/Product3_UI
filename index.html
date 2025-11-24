@@ -8,11 +8,45 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Enlace al archivo CSS externo -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="app.js" defer></script>
 </head>
 <body class="bg-[#0F0F0F] text-[#F1F1F1] font-sans">
 
+    <!-- PORTADA CON FONDO DE PARTÍCULAS -->
+    <div id="portada" class="fixed inset-0 flex flex-col items-center justify-center text-white p-10 z-50 overflow-hidden">
+
+        <!-- FONDO ANIMADO -->
+        <canvas id="particles"></canvas>
+
+        <div class="relative z-10 flex flex-col items-center">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-wide mb-6 text-center">
+                UNIVERSIDAD TECNOLÓGICA DE PUEBLA
+            </h1>
+
+            <h2 class="text-2xl font-semibold mb-4">Producto 3</h2>
+
+            <div class="bg-white/10 rounded-xl p-6 backdrop-blur-md shadow-xl mb-8">
+                <h3 class="text-xl font-semibold mb-3 text-center">Integrantes del equipo</h3>
+                <ul class="text-lg space-y-1 text-center">
+                    <li>Carlos Manuel Ojeda Hernández</li>
+                    <li>Aldo Misael Leal Palafox</li>
+                    <li>Adrián Olmedo Arango</li>
+                    <li>Roger Alexis Atenco Guerrero</li>
+                </ul>
+            </div>
+
+            <button onclick="entrar()"
+                class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full text-lg shadow-lg transition">
+                Ver Producto 3
+            </button>
+        </div>
+    </div>
+
+
     <!-- 1. Barra de Navegación Superior (Header) -->
     <header class="flex items-center justify-between px-4 py-2 bg-[#0F0F0F] border-b border-b-[#3F3F3F]">
+
         <!-- Izquierda: Logo -->
         <div class="flex items-center space-x-2">
             <!-- Icono de Hamburguesa (placeholder) -->
@@ -173,6 +207,12 @@
             </div>
         </main>
     </div>
+
+    <!-- Botón flotante para regresar a la portada -->
+    <button onclick="regresarPortada()"
+        class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg z-40">
+        Regresar a Portada
+    </button>
 
 </body>
 </html>
